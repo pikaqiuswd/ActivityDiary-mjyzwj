@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ ActivityDiary
+  ~
+  ~ Copyright (C) 2024 Raphael Mack http://www.raphael-mack.de
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.DiaryActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:rippleColor="@color/white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="每日步数"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_title_calorie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="每日卡路里"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_calorie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_title_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="日期"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2023-10-10"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:rippleColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_bmi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="BMI计算器"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <com.zkk.view.rulerview.RulerView
+                android:id="@+id/ruler_height"
+                android:layout_width="fill_parent"
+                android:layout_height="58.0dip"
+                android:layout_marginTop="10dp"
+                app:alphaEnable="true"
+                app:lineColor="@color/black"
+                app:lineMaxHeight="40dp"
+                app:lineMidHeight="30dp"
+                app:lineMinHeight="20dp"
+                app:lineSpaceWidth="10dp"
+                app:lineWidth="2dip"
+                app:maxValue="250.0"
+                app:minValue="80.0"
+                app:perValue="1"
+                app:selectorValue="165.0"
+                app:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="165" />
+
+            <com.zkk.view.rulerview.RulerView
+                android:id="@+id/ruler_weight"
+                android:layout_width="fill_parent"
+                android:layout_height="58.0dip"
+                android:layout_marginTop="10dp"
+                app:alphaEnable="true"
+                app:lineColor="@color/black"
+                app:lineMaxHeight="40dp"
+                app:lineMidHeight="30dp"
+                app:lineMinHeight="20dp"
+                app:lineSpaceWidth="10dp"
+                app:lineWidth="2dip"
+                app:maxValue="300.0"
+                app:minValue="20.0"
+                app:perValue="1"
+                app:selectorValue="100.0"
+                app:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="70" />
+
+            <TextView
+                android:id="@+id/tv_bmi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="您的BMI：22.04【正常】"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="save" />
+
+</LinearLayout>
